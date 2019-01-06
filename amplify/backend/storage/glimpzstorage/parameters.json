@@ -1,0 +1,9 @@
+{
+    "bucketName": "glimpzbucket",
+    "authPolicyName": "s3_amplify_dd5f2f58",
+    "unauthPolicyName": "s3_amplify_dd5f2f58",
+    "authRoleName": "limpz-20190101232655-authRole",
+    "unauthRoleName": "limpz-20190101232655-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": "r"
+}

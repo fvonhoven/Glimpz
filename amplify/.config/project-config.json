@@ -1,0 +1,20 @@
+{
+    "projectName": "Glimpz",
+    "projectPath": "/Users/Frank/projects/playground/fvonhoven/Glimpz",
+    "defaultEditor": "code",
+    "frontendHandler": {
+        "javascript": "/Users/Frank/.config/yarn/global/node_modules/amplify-frontend-javascript"
+    },
+    "javascript": {
+        "framework": "react-native",
+        "config": {
+            "SourceDir": "/",
+            "DistributionDir": "/",
+            "BuildCommand": "react-native run-ios",
+            "StartCommand": "yarn start"
+        }
+    },
+    "providers": {
+        "awscloudformation": "/Users/Frank/.config/yarn/global/node_modules/amplify-provider-awscloudformation"
+    }
+}
