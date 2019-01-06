@@ -33,8 +33,7 @@ class App extends React.Component {
 
   getImage = file => {
     this.setState({ fetching: true })
-    Storage.get("IMG_0111.HEIC", {
-      contentType: "image/jpg",
+    Storage.get("IMG_0005.JPG", {
       level: "private"
     })
       .then(result => {
@@ -45,7 +44,7 @@ class App extends React.Component {
   }
 
   openImagePicker = () => {
-    ImagePicker.launchImageLibrary({}, response => {
+    ImagePicker.launchImageLibrary({ mediaType: "mixed" }, response => {
       console.log("RESPONSE", response)
       const readFile = filePath => {
         return RNFetchBlob.fs.readFile(filePath, "base64").then(data => new Buffer(data, "base64"))
@@ -54,9 +53,8 @@ class App extends React.Component {
       readFile(response.origURL)
         .then(buffer => {
           Storage.put(response.fileName, buffer, {
-            level: "private",
-            contentType: "image/jpg"
-          })
+            level: "private"
+          }).then(result => console.log("S3 RESULT", result))
         })
         .catch(e => {
           console.log(e)
